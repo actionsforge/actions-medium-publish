@@ -2,11 +2,15 @@
   "name": "actions-medium-publish",
   "version": "1.0.0",
   "description": "Publish markdown articles to Medium from your GitHub repository using the Medium API",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "tsup",
+    "test": "vitest",
+    "lint": "eslint . --ext .ts",
+    "format": "prettier --write \"src/**/*.ts\"",
+    "prepare": "npm run build"
   },
-  "keywords": [],
+  "keywords": ["medium", "github-actions", "markdown", "publishing"],
   "author": "",
   "license": "ISC",
   "devDependencies": {
@@ -20,6 +24,8 @@
   "dependencies": {
     "@actions/core": "^1.11.1",
     "@actions/github": "^6.0.1",
-    "@actions/io": "^1.1.3"
+    "@actions/io": "^1.1.3",
+    "axios": "^1.6.7",
+    "gray-matter": "^4.0.3"
   }
 }

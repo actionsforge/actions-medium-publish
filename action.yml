@@ -11,11 +11,21 @@ inputs:
     description: "Medium integration token"
     required: true
   title:
-    description: "Title of the article"
-    required: true
+    description: "Title of the article (optional if provided in markdown frontmatter)"
+    required: false
   content:
-    description: "Markdown content or path to file"
+    description: "Markdown content or path to markdown file"
     required: true
+  publishStatus:
+    description: "Publishing status (draft, unlisted, or public)"
+    required: false
+    default: "draft"
+
+outputs:
+  postUrl:
+    description: "URL of the published post"
+  postId:
+    description: "ID of the published post"
 
 runs:
   using: "node20"
