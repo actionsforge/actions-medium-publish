@@ -15,5 +15,6 @@ export default defineConfig({
     '@actions/github',
     'js-yaml',
     '@octokit/rest'
-  ]
+  ],
+  splitting: false
 });

@@ -1,10 +1,7 @@
 # action.yml
 name: "Medium Publisher"
 description: "Publishes articles to Medium from GitHub Actions"
-author: "yourname"
-branding:
-  icon: "upload-cloud"
-  color: "blue"
+author: "ActionsForge"
 
 inputs:
   mediumToken:
@@ -30,3 +27,6 @@ outputs:
 runs:
   using: "node20"
   main: "dist/index.js"
+branding:
+  icon: "upload-cloud"
+  color: "blue"
