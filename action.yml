@@ -1,0 +1,22 @@
+# action.yml
+name: "Medium Publisher"
+description: "Publishes articles to Medium from GitHub Actions"
+author: "yourname"
+branding:
+  icon: "upload-cloud"
+  color: "blue"
+
+inputs:
+  mediumToken:
+    description: "Medium integration token"
+    required: true
+  title:
+    description: "Title of the article"
+    required: true
+  content:
+    description: "Markdown content or path to file"
+    required: true
+
+runs:
+  using: "node20"
+  main: "dist/index.js"
